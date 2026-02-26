@@ -3,10 +3,24 @@
 
 #include <iostream>
 
-//void iter(char *arr, size_t lenArr, int (*func)(int))
+template <typename T>
+void mult(T& x)
+{
+	x *= 3;
+}
 
-template <typename T, typename F> void iter(T &arr, const size_t lenArr, T(*func)(T)) {
+template <typename T>
+void print(T& x)
+{
+	std::cout << 
+}
 
+template <typename T, typename F> 
+void iter(T &arr, const size_t lenArr, F func) {
+	for (size_t i = 0; i < lenArr; i++)
+	{
+		func(arr[i]);
+	}
 }
 
 #endif
