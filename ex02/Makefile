@@ -5,21 +5,22 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mmitkovi <mmitkovi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/02/27 18:06:21 by mmitkovi          #+#    #+#              #
-#    Updated: 2026/02/27 19:05:36 by mmitkovi         ###   ########.fr        #
+#    Created: 2026/02/27 18:07:49 by mmitkovi          #+#    #+#              #
+#    Updated: 2026/02/27 19:07:18 by mmitkovi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	:= swap
+NAME	:= array
 
 CXX     := c++
 CXXFLAGS:= -Wall -Wextra -Werror -std=c++98
 
-SRCS    := main.cpp
+SRCS    := main.cpp \
 
 OBJS    := $(SRCS:.cpp=.o)
 
-DEPS    := whatever.hpp \
+DEPS    := Array.hpp \
+			Array.tpp
 
 all: $(NAME)
 
