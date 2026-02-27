@@ -3,16 +3,16 @@
 
 #include <iostream>
 
-template <typename T> void swap(T &x, T &y) {
+template <typename T> void swap( T &x,  T &y) {
     T swap = x;
     x = y;
     y = swap;
 }
 
-template <typename T> T max(T &x, T &y) {
+template <typename T> T max( const T &x, const T &y) {
     return (x > y) ? x : y;
 }
-template <typename T> T min(T &x, T &y) {
+template <typename T> T min( const T &x, const T &y) {
     return (x < y) ? x : y;
 }
 

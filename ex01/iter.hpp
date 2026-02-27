@@ -4,19 +4,19 @@
 #include <iostream>
 
 template <typename T>
-void mult(T& x)
+void mult( T& x)
 {
 	x *= 3;
 }
 
 template <typename T>
-void print(T& x)
+void print( const T& x)
 {
-	std::cout << 
+	std::cout << "Print: " << x << std::endl;
 }
 
 template <typename T, typename F> 
-void iter(T &arr, const size_t lenArr, F func) {
+void iter(T *arr, const size_t lenArr, F func) {
 	for (size_t i = 0; i < lenArr; i++)
 	{
 		func(arr[i]);

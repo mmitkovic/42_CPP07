@@ -4,7 +4,7 @@ int main()
 {
 	{
 		std::cout << "___INT___" << std::endl;
-		const int arr[3] = {1, 2, 10};
+		 int arr[3] = {1, 2, 10};
 		::iter(arr, 3, mult<int>);
 
 		for (int i = 0; i < 3; ++i)
@@ -17,6 +17,11 @@ int main()
 
 		for (int i = 0; i < 3; ++i)
 			std::cout << arrDbl[i] << std::endl;
+	}
+	{
+		std::cout << "___PRINT___" << std::endl;
+		const char arrChar[3] = {'a', 'b', 'c'};
+		::iter(arrChar, 3, print<char>);
 	}
 
 	return 0;
