@@ -13,7 +13,6 @@
 #include "Array.hpp"
 #include <iostream>
 
-// Tip: Try to compile int * a = new int(); then display *a.
 int main() 
 {
 	Array<int> a(5);
@@ -22,7 +21,7 @@ int main()
 	try {
 		a[0] = 6;
 		a.print();
-		a[5] = 125;
+		a[5] = 125; // overloaded subscript operator call
 	} catch (std::exception &e){
 		std::cout << e.what() << std::endl;
 	}
@@ -38,6 +37,11 @@ int main()
 		b.print();
 		std::cout << "Testing array a: ";
 		a.print();
+		std::cout << "\n----------\n";
+		b = a;
+		std::cout << "Testing array after [c][a][o] b: ";
+		b.print();
+		std::cout << "\n----------\n";
 		b[5] = 125;
 	} catch (std::exception &e){
 		std::cout << e.what() << std::endl;

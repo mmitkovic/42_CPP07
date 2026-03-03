@@ -38,10 +38,19 @@ Array<T>::Array(const Array& rhs)
 		newArr[i] = rhs.newArr[i];
 	}
 }
-
-/*
-	[c][a][o]
-*/
+template <typename T>
+Array<T>& Array<T>::operator=(const Array& rhs) {
+	std::cout << "[c][a][o]Array" << std::endl;
+	if (this != &rhs) {
+		this->_size = rhs._size;
+		newArr = new T[this->_size]();
+		for (unsigned int i = 0; i < this->_size; ++i)
+		{
+			newArr[i] = rhs.newArr[i];
+		}
+	}
+	return *this;
+}
 
 template <typename T>
 Array<T>::~Array()
