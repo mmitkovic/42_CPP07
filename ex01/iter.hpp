@@ -6,7 +6,7 @@
 /*   By: mmitkovi <mmitkovi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/27 18:06:02 by mmitkovi          #+#    #+#             */
-/*   Updated: 2026/02/27 18:06:03 by mmitkovi         ###   ########.fr       */
+/*   Updated: 2026/03/16 13:06:15 by mmitkovi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,10 @@
 
 #include <iostream>
 
-template <typename T>
-void mult( T& x)
-{
-	x *= 3;
-}
+template <typename T> void mult( T& x) { x *= 3; }
 
 template <typename T>
-void print( const T& x)
-{
-	std::cout << "Print: " << x << std::endl;
-}
+void print( const T& x) { std::cout << "Print: " << x << std::endl; }
 
 template <typename T, typename F> 
 void iter(T *arr, const size_t lenArr, F func) {

@@ -6,7 +6,7 @@
 /*   By: mmitkovi <mmitkovi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/27 18:06:06 by mmitkovi          #+#    #+#             */
-/*   Updated: 2026/02/27 18:06:07 by mmitkovi         ###   ########.fr       */
+/*   Updated: 2026/03/16 14:17:31 by mmitkovi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int main()
 
 		for (int i = 0; i < 3; ++i)
 			std::cout << arr[i] << std::endl;
+		std::cout << std::endl;
 	}
 	{
 		std::cout << "___DOUBLE___" << std::endl;
@@ -29,11 +30,13 @@ int main()
 
 		for (int i = 0; i < 3; ++i)
 			std::cout << arrDbl[i] << std::endl;
+		std::cout << std::endl;
 	}
 	{
 		std::cout << "___PRINT___" << std::endl;
 		const char arrChar[3] = {'a', 'b', 'c'};
 		::iter(arrChar, 3, print<char>);
+		std::cout << std::endl;
 	}
 
 	return 0;

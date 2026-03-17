@@ -6,7 +6,7 @@
 /*   By: mmitkovi <mmitkovi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/27 18:09:35 by mmitkovi          #+#    #+#             */
-/*   Updated: 2026/02/27 20:45:00 by mmitkovi         ###   ########.fr       */
+/*   Updated: 2026/03/16 14:57:47 by mmitkovi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,19 @@ template <typename T>
 Array<T>::Array(const Array& rhs) 
 {
 	std::cout << "[c][c]Array" << std::endl;
-	
 	this->_size = rhs._size;
 	newArr = new T[this->_size]();
 	for (unsigned int i = 0; i < this->_size; ++i)
-	{
-		newArr[i] = rhs.newArr[i];
-	}
+		this->newArr[i] = rhs.newArr[i];
 }
 template <typename T>
-Array<T>& Array<T>::operator=(const Array& rhs) {
+Array<T>& Array<T>::operator=(const Array& rhs) 
+{
 	std::cout << "[c][a][o]Array" << std::endl;
-	if (this != &rhs) {
+	if (this != &rhs) 
+	{
 		this->_size = rhs._size;
+		delete [] newArr;
 		newArr = new T[this->_size]();
 		for (unsigned int i = 0; i < this->_size; ++i)
 		{
@@ -56,7 +56,7 @@ template <typename T>
 Array<T>::~Array()
 {
 	std::cout << "~Array" << std::endl;
-	delete[] newArr;
+	delete [] newArr;
 }
 
 template <typename T>
@@ -69,10 +69,7 @@ T& Array<T>::operator[](unsigned int i)
 }
 
 template <typename T>
-unsigned int Array<T>::size() const
-{
-	return this->_size;
-}
+unsigned int Array<T>::size() const { return this->_size; }
 
 template <typename T>
 void Array<T>::print() const
